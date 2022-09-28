@@ -43,7 +43,7 @@ func Example() {
 		fmt.Println("Yay, I still have my lock!")
 	}
 
-	// Extend my lock.
+	// Extend my lock (refresh lock)
 	if err := lock.Refresh(ctx, 100*time.Millisecond, nil); err != nil {
 		log.Fatalln(err)
 	}
